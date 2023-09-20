@@ -17,14 +17,12 @@ services:
       - postgres
       - redis
 
-  # PostgreSQL veritabanı
   postgres:
-    image: postgres:latest
+    image: postgres:16
     environment:
-      POSTGRES_USER: your_db_user
-      POSTGRES_PASSWORD: your_db_password
-      POSTGRES_DB: your_db_name
+      POSTGRES_USER: live-chat-user
+      POSTGRES_PASSWORD: live-chat-password
+      POSTGRES_DB: live-chat
 
-  # Redis
   redis:
-    image: redis:latest
+    image: redis:7.2.1
