@@ -4,6 +4,12 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - "NEXT_WEBPACK_USEPOLLING=1"
     ports:
       - '3000:3000' # client port
 
