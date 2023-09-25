@@ -36,6 +36,8 @@ clean:
 test-server:
 	$(DC) exec $(NESTJSAPP) npm test
 
+branch-name:
+	@echo "Git Branch Name Schema: {feat/fix}/{app_type}/{workspace}-{specific-workspace}"
 # Help
 help:
 	@echo "Available Targets:"
@@ -46,3 +48,4 @@ help:
 	@echo "  clean        : Clean up containers and database"
 	@echo "  client       : Start only the client side"
 	@echo "  test-server  : Test server side"
+	@echo "  branch-name  : Show branch name standard"
