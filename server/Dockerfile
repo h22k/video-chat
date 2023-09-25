@@ -2,7 +2,7 @@ FROM node:18 AS build
 WORKDIR /app
 COPY package.json ./
 COPY pnpm-lock.yaml ./
-RUN npm install
+RUN npm install -s
 
 COPY . .
 
