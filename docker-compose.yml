@@ -6,8 +6,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./client:/app
-      - ./client/node_modules:/app/node_modules
-      - ./client/.next:/app/.next
+      - /app/node_modules
+      - /app/.next
     environment:
       - "NEXT_WEBPACK_USEPOLLING=1"
     ports:
@@ -19,7 +19,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./server:/app
-      - ./server/node_modules:/app/node_modules
+      - /app/node_modules
     ports:
       - '8080:8080' # server port
     depends_on:
