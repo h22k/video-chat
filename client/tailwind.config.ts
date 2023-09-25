@@ -15,7 +15,11 @@ const config: Config = {
       },
       fontFamily: {
         'poppins': "'Poppins', sans-serif"
-      }
+      },
+      colors: {
+        'primary-white': '#f5f5f7',
+        'primary-black': '#1d1d1f'
+      },
     },
   },
   plugins: [],
