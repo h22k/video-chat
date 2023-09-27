@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { usePathname } from 'next/navigation'
-import NavLink from '../navbar/NavLink'
+import NavLink from '../common/navbar/NavLink'
 
 const AuthLinks = () => {
   const pathname = usePathname()

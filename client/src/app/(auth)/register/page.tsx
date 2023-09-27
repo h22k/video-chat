@@ -1,6 +1,6 @@
-import FormButton from "@/components/ui/FormButton";
-import InputField from "../../../components/ui/InputField";
+import FormButton from "@/components/common/form/FormButton";
 import AuthFormTemplate from "@/components/auth/AuthFormTemplate";
+import InputField from "@/components/common/form/InputField";
 
 export default function RegisterPage() {
   return (

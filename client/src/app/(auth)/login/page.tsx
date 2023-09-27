@@ -1,6 +1,6 @@
-import InputField from "@/components/ui/InputField";
 import AuthFormTemplate from "@/components/auth/AuthFormTemplate";
-import FormButton from "@/components/ui/FormButton";
+import FormButton from "@/components/common/form/FormButton";
+import InputField from "@/components/common/form/InputField";
 
 export default function LoginPage() {
   return (
