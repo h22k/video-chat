@@ -2,13 +2,11 @@
 import configuration from './config/configuration'
 // packages
 import { Module } from '@nestjs/common'
-import { GraphQLModule } from '@nestjs/graphql'
-import { join } from 'path'
-import { UsersModule } from './users/users.module'
-import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo'
+import { UsersModule } from './modules/users/users.module'
 import { ConfigModule } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { TypeOrmConfigService } from './database/TypeOrmConfigService'
+import { GraphqlModule } from './modules/graphql/graphql.module'
 
 @Module({
   imports: [
@@ -16,15 +14,12 @@ import { TypeOrmConfigService } from './database/TypeOrmConfigService'
       isGlobal: true,
       load: [configuration],
     }),
-    GraphQLModule.forRoot<ApolloDriverConfig>({
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      sortSchema: true,
-      driver: ApolloDriver,
-    }),
     TypeOrmModule.forRootAsync({
       useClass: TypeOrmConfigService,
     }),
+    GraphqlModule,
     UsersModule,
+    GraphqlModule,
   ],
 })
 export class AppModule {}
