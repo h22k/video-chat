@@ -12,6 +12,8 @@ services:
       - "NEXT_WEBPACK_USEPOLLING=1"
     ports:
       - '3000:3000' # client port
+    networks:
+      - video-chat
 
   nestjs-server:
     build:
@@ -25,9 +27,15 @@ services:
     depends_on:
       - postgres
       - redis
+    networks:
+      - video-chat
 
   postgres:
     image: postgres:16
+    ports:
+      - '5432:5432'
+    networks:
+      - video-chat
     environment:
       POSTGRES_USER: live-chat-user
       POSTGRES_PASSWORD: live-chat-password
@@ -35,3 +43,10 @@ services:
 
   redis:
     image: redis:7.2.1
+    ports:
+      - '6379:6379'
+    networks:
+      - video-chat
+networks:
+  video-chat:
+    driver: bridge
