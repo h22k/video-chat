@@ -1,10 +1,7 @@
 import HomeNavbar from '@/components/homepage/HomeNavbar'
 import Image from 'next/image'
 import meet from '../../public/meeting.svg'
-import InputField from '@/components/common/form/InputField'
 import MeetingButton from '@/components/homepage/MeetingButton'
-import { TbArrowsJoin2 } from 'react-icons/tb'
-import Link from 'next/link'
 import HeadingContent from '@/components/homepage/HeadingContent'
 import JoinToAMeeting from '@/components/homepage/JoinToAMeeting'
 
