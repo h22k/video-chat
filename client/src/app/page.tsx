@@ -10,13 +10,13 @@ export default function Home() {
     <>
       <HomeNavbar/>
       <div className="grid sm:grid-cols-2 grid-cols-1 h-[calc(100vh-6.2rem)] gap-x-4">
-        <Image src={meet} alt="two people having a meeting" className="sm:row-span-2 self-center justify-self-center"
+        <Image src={meet} alt="two people having a meeting" className="self-center justify-self-center sm:row-span-2"
                priority/>
-        <div className="self-end w-4/5 -order-1 sm:order-none mx-auto md:border-b pb-7">
+        <div className="-order-1 mx-auto w-4/5 self-end pb-7 sm:order-none md:border-b">
           <HeadingContent/>
         </div>
         <div
-          className="flex gap-4 self-start lg:flex-row flex-col items-center w-full lg:w-4/5 justify-self-center mt-7 pb-12 ">
+          className="mt-7 flex w-full flex-col items-center gap-4 self-start justify-self-center pb-12 lg:w-4/5 lg:flex-row">
           <MeetingButton/>
           <JoinToAMeeting/>
         </div>

@@ -6,7 +6,7 @@ body {
     @apply bg-slate-100 text-primary-black
 }
 
-.meeting-button::after, .meeting-button::before {
+.custom-button::after, .custom-button::before {
     width: 80%;
     height: 2px;
     position: absolute;
@@ -14,4 +14,3 @@ body {
     filter: blur(2px);
     border-radius: 50%;
 }
-

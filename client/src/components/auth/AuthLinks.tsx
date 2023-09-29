@@ -8,16 +8,16 @@ const AuthLinks = () => {
   const pathname = usePathname()
 
   return (
-    <div className='text-center'>
+    <div className="text-center">
       {pathname === '/register' ? (
         <>
-          <p className='text-violet-500 text-xs'>Have an account?</p>
-          <NavLink href='/login'>Login here</NavLink>
+          <p className="text-xs text-violet-500">Have an account?</p>
+          <NavLink href="/login">Login here</NavLink>
         </>
       ) : (
         <>
-          <p className='text-violet-500 text-xs'>Want to join?</p>
-          <NavLink href='/register'>register here</NavLink>
+          <p className="text-xs text-violet-500">Want to join?</p>
+          <NavLink href="/register">register here</NavLink>
         </>
       )}
     </div>

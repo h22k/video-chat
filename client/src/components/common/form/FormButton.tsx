@@ -1,14 +1,16 @@
 import React from 'react'
+import CustomButton from '@/components/common/ui/CustomButton'
 
 export type FormButtonTypes = {
-  children: React.ReactNode
+  children : React.ReactNode
 }
 
-const FormButton = ({ children }: FormButtonTypes) => {
+const FormButton = ({ children } : FormButtonTypes) => {
   return (
-    <button type="submit" className="uppercase bg-gradient-rainbow text-white font-medium px-3 py-2 rounded-full shadow w-3/4 transition-all hover:hue-rotate-180 duration-500">
-      { children }
-    </button>
+    <CustomButton type="submit"
+                  className="w-4/5 rounded-full uppercase shadow transition-all duration-500 bg-gradient-rainbow hover:contrast-125">
+      {children}
+    </CustomButton>
   )
 }
 

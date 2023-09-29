@@ -1,15 +1,16 @@
 import React from 'react'
 import { BsPersonVideo } from 'react-icons/bs'
 import Link from 'next/link'
+import CustomButton from '@/components/common/ui/CustomButton'
 
 const MeetingButton = () => {
   return (
     <Link href="/" className="w-4/5">
-      <button
-        className="capitalize gap-4 w-full relative px-3 py-2 bg-violet-400 shadow-jelly flex items-center justify-center rounded-xl text-white font-bold tracking-wide meeting-button before:top-2 after:bottom-2 before:bg-white/70 after:bg-white/30 hover:bg-gradient-rainbow basis-1/3 whitespace-nowrap transition-all duration-300">
+      <CustomButton
+        className="w-full basis-1/3 gap-4 whitespace-nowrap rounded-xl bg-violet-400 font-bold capitalize tracking-wide text-white transition-all duration-300 hover:bg-gradient-rainbow">
         <BsPersonVideo size={20}/>
         start a meeting
-      </button>
+      </CustomButton>
     </Link>
   )
 }

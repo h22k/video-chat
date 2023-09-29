@@ -41,6 +41,9 @@ const config : Config = {
       animation: {
         wiggle: 'wiggle 1s ease-in-out 0.5s infinite',
       },
+      gridTemplateColumns: {
+        'auth': '3fr 2fr',
+      },
     },
   },
   plugins: [],
