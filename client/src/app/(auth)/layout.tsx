@@ -4,9 +4,10 @@ import blobs from '../../../public/blobs.svg'
 import meeting from '../../../public/auth-page.svg'
 import Image from 'next/image'
 
-export default function AuthLayout({ children } : {
+export type AuthLayoutTypes = {
   children : React.ReactNode
-}) {
+}
+export default function AuthLayout({ children } : AuthLayoutTypes) {
   return (
     <>
       <AuthNavbar/>
@@ -16,7 +17,7 @@ export default function AuthLayout({ children } : {
                  className="absolute opacity-40 sm:opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[calc(100vh-3.1rem)] w-full overflow-hidden drop-shadow-lg"/>
           <Image src={meeting} alt="representational image of the auth page" className="hidden sm:block"/>
         </div>
-        <div className="">
+        <div>
           {children}
         </div>
       </div>
